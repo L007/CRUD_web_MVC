@@ -8,6 +8,7 @@
 <body>
 	<h1 align="center">CRUD MAHASISWA</h1>
 	<br><br>
+	<!-- button diarahkan ke link dengan param controller=mahasiswa dan action=tampilAddMahasiswa -->
 	<a href="?controller=mahasiswa&action=tampilAddMahasiswa"><button type="button" class="btn btn-info">Tambah Data</button></a>
 	<br><br>
 	<div class="container">
@@ -18,11 +19,12 @@
 			<th>Jurusan</th>
 			<th>action</th>
 			<?php $i=1; ?>
-			<?php foreach ($posts as $post) { ?>
+			<?php foreach ($posts as $post) { /*Mengambil seluruh data dari variabel 
+				posts yang ditampung ke variabel post*/ ?>
 			
 			<tr>
 
-				<td><?php echo $i; ?></td>
+				<td><?php echo $i; ?></td> <!-- mencetak data $post->nim dll berasal dari variabel yang berada di m_mahasiswa -->
 				<td><?php echo $post->nim; ?></td>
 				<td><?php echo $post->nama; ?></td>
 				<td><?php echo $post->jurusan;  ?></td>

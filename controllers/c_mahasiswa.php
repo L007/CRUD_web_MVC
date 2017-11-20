@@ -23,7 +23,6 @@ Class MahasiswaController{
 	}
 	public function deleteMahasiswa(){
 		$posts=Mahasiswa::deleteMahasiswa($_GET["id"]);
-		/*require_once("views/pages/home.php");*/
 		header("location:index.php?controller=home&action=home");
 	}
 	
